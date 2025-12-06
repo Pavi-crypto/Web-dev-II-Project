@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Speech-to-Text Pad</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1><i class="fas fa-microphone-alt"></i> Speech-to-Text Pad</h1>
+            <p class="subtitle">Click the mic, speak, and watch your words appear!</p>
+        </header>
+
+        <main>
+            <div class="controls">
+                <button id="startBtn" class="btn start-btn">
+                    <i class="fas fa-microphone"></i> Start Listening
+                </button>
+                <button id="stopBtn" class="btn stop-btn" disabled>
+                    <i class="fas fa-stop"></i> Stop Listening
+                </button>
+                <button id="saveBtn" class="btn save-btn">
+                    <i class="fas fa-save"></i> Save Note
+                </button>
+                <button id="clearBtn" class="btn clear-btn">
+                    <i class="fas fa-trash-alt"></i> Clear All
+                </button>
+            </div>
+
+            <div class="status-indicator">
+                <div id="status" class="status idle">
+                    <i class="fas fa-microphone-slash"></i> Ready to listen
+                </div>
+                <div class="instructions">
+                    <p><i class="fas fa-lightbulb"></i> <strong>Tip:</strong> Speak clearly and in a quiet environment for best results.</p>
+                </div>
+            </div>
+
+            <div class="text-container">
+                <div class="textarea-header">
+                    <h3><i class="fas fa-edit"></i> Your Speech Will Appear Here:</h3>
+                    <div class="word-count">Words: <span id="wordCount">0</span></div>
+                </div>
+                <textarea id="textOutput" placeholder="Start speaking and your words will appear here..."></textarea>
+            </div>
+
+            <div class="saved-notes">
+                <h3><i class="fas fa-sticky-note"></i> Saved Notes</h3>
+                <div id="notesList" class="notes-list">
+                    <p class="empty-notes">No saved notes yet. Speak something and click "Save Note"!</p>
+                </div>
+            </div>
+        </main>
+
+        <footer>
+            <p>Speech Recognition API | Made with <i class="fas fa-heart"></i> for learning</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
